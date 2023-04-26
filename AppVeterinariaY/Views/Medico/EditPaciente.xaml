@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Medico.EditPaciente">
+    <ScrollView>
+        <StackLayout Background="#F5F7F7">
+            <Image Source="Med.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+            <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+                <StackLayout Background="#F5F7F7">
+                    <Label Text="Registrar nuevo paciente " HorizontalTextAlignment="Center" TextColor="black" FontSize="20"/>
+                    <ImageButton Source="Salir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                         x:Name="bntsalir"
+                         Clicked="bntsalir_Clicked"
+                         CornerRadius="10"
+                         BackgroundColor="#F5F7F7"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Entry x:Name="Idmascota" IsVisible="False"  Text="{Binding Idmascota}"/>
+
+            <Label Text="Nombre de la mascota" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry  TextColor="#7F7979"
+                           x:Name="nombremascotatxt"
+                        Text="{Binding nombreMascota}"/>
+            </Frame>
+            <Label Text="Cedula propietario" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="Idccpropietariotxt"
+                       Text="{Binding IdcedulaDueño}"/>
+            </Frame>
+            <Label Text="Edad Mascota" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="edadmascotatxt"
+                       Text="{Binding edadMascota}"/>
+            </Frame>
+
+            <Label Text="Especie" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+
+                <Picker x:Name="EspeciePicker">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Perro</x:String>
+                            <x:String>Gato</x:String>
+                            <x:String>Pez</x:String>
+                            <x:String>Ave</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Frame>
+
+            <Label Text="Raza" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="razatxt"
+                       Text="{Binding raza}"/>
+            </Frame>
+            <Label Text="Caracteristicas" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="caractxt"
+                       Text="{Binding caracteristicas}"/>
+            </Frame>
+
+
+            <Label Text="Peso" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="pesotxt"
+                       Text="{Binding peso}"/>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" HorizontalOptions="CenterAndExpand">
+                <Button Text="Modificar"
+                            Background="#138A34" 
+                            CornerRadius="10"
+                            x:Name="btnModificarPaciente"
+                       Clicked="btnModificarPaciente_Clicked" IsVisible="true"/>
+                <Button Text="Eliminar"
+                            Background="#138A34" 
+                            CornerRadius="10"
+                            x:Name="btnEliminarPaciente"
+                        Clicked="btnEliminarPaciente_Clicked" IsVisible="true"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Vendedor.DetailVendedor">
+    <ContentPage.Content>
+        <StackLayout Background="#F5F7F7">
+            <Image Source="Vendedor.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+
+            <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+                <Label Text="¡Que tengas un lindo turno! " HorizontalTextAlignment="Center" TextColor="black" FontSize="20"/>
+            </Frame>
+            <StackLayout>
+
+                <Image Source="fnd.png"
+               Margin="0,0,0,0"
+               WidthRequest="1000"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

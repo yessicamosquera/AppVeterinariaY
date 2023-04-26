@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Medico.VerPaciente">
+    <StackLayout Background="#F5F7F7">
+        <Image Source="Med.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+        <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="PACIENTES " HorizontalTextAlignment="Center" FontSize="25" TextColor="black"  FontAttributes="Bold"
+                   Margin="110,0,70,0"/>
+                <ImageButton Source="Salir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                         x:Name="bntsalir"
+                         Clicked="bntsalir_Clicked" 
+                         CornerRadius="10"
+                         BackgroundColor="#F5F7F7"/>
+            </StackLayout>
+        </Frame>
+
+
+        <ScrollView>
+            <FlexLayout IsVisible="True" Background="white" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Start">
+                <ListView x:Name="lstHistoria" ItemSelected="lstHistoria_ItemSelected"  Margin="0,20,0,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout  Margin="2,2,2,2" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                                    <Label x:Name="lbIdmascota" Text="{Binding Idmascota}" TextColor="Black" Margin="0,0,5,0" />
+                                    <Label x:Name="lbnombremascota" Text="{Binding nombreMascota}"   TextColor="#138A34" Margin="5,0,5,0" />
+                                    <Label x:Name="lbCcdueño" Text="{Binding IdcedulaDueño}"   TextColor="Black" Margin="5,0,5,0"/>
+                                    <Label x:Name="lbedadMascota" Text="{Binding edadMascota}"   TextColor="#138A34" Margin="5,0,5,0"/>
+                                    <Label x:Name="lbespecie" Text="{Binding Idespecie}"   TextColor="Black" Margin="5,0,5,0"/>
+                                    <Label x:Name="lbraza"  Text="{Binding raza}"   TextColor="#138A34" Margin="5,0,5,0"/>
+                                    <Label x:Name="lbcaracteristicas" Text="{Binding caracteristicas}"  TextColor="Black" Margin="5,0,5,0"/>
+                                    <Label x:Name="lbpeso" Text="{Binding peso}"  TextColor="#138A34" Margin="5,0,0,0"/>
+
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </FlexLayout>
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

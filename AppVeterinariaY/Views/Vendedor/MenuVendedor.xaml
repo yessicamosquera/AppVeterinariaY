@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Vendedor.MenuVendedor"
+              Title="Master">
+    <ContentPage.Content Background="#12a89d">
+        <StackLayout Background="white" >
+
+            <Button Margin="0,40,0,0" Background="#12a89d" x:Name="Ordenes" Text="Orden médica" Clicked="Ordenes_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="VerHistoriaTxt" Text="Historia Clinica" Clicked="VerHistoriaTxt_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="FacturaTxt" Text="Factura"/>
+
+            <Button Margin="0,200,0,0" Background="#12a89d" Text="Cerrar sesion"
+                    CornerRadius="10"
+                    x:Name="salir1"
+                    Clicked="salir1_Clicked"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

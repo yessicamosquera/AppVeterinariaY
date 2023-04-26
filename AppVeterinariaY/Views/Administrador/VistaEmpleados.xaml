@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Administrador.VistaEmpleados"
+             Title="Empleados registrados">
+
+    <StackLayout Background="#F5F7F7">
+        <Image Source="adm.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+        <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="EMPLEADOS " HorizontalTextAlignment="Center" TextColor="black" FontSize="20" FontAttributes="Bold"
+                       Margin="150,0,100,0"/>
+                <ImageButton Source="Salir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                         x:Name="bntsalir"
+                         Clicked="bntsalir_Clicked" 
+                         CornerRadius="10"
+                         BackgroundColor="#F5F7F7"/>
+            </StackLayout>
+        </Frame>
+
+        <ScrollView>
+            <StackLayout IsVisible="True" Background="white">
+                <ListView x:Name="lstUser" ItemSelected="lstUser_ItemSelected"  Margin="0,20,0,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="2,2,2,2" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="lbIdNombre" Text="{Binding Idcedula}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                                        <Label x:Name="lbNombre" Text="{Binding nombre}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                                        <Label x:Name="lbUsuario" Text="{Binding Usuario}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+                                        <Label x:Name="lbContra" Text="{Binding Contraseña}" Grid.Row="0" Grid.Column="3" TextColor="Black"/>
+                                        <Label x:Name="lbIdrol" Text="{Binding Idrol}" Grid.Row="0" Grid.Column="4" TextColor="Black"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

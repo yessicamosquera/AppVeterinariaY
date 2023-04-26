@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Vendedor.VerlistaOrden">
+    <StackLayout Background="#F5F7F7">
+        <Image Source="Med.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+        <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Historia Clinica " HorizontalTextAlignment="Center" FontSize="25" TextColor="black"  FontAttributes="Bold"
+                   Margin="110,0,70,0"/>
+                <ImageButton Source="Salir.png"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                         x:Name="bntsalir"
+                         Clicked="bntsalir_Clicked"
+                         CornerRadius="10"
+                         BackgroundColor="#F5F7F7"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout IsVisible="True" Background="white">
+            <ListView x:Name="lstHistoria" ItemSelected="lstHistoria_ItemSelected"  Margin="0,20,0,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.5*"/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="lbIdHistoria" Text="{Binding Idorden}" Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                                    <Label x:Name="lbmedicamento" Text="{Binding medicamento}" Grid.Row="0" Grid.Column="1" TextColor="Black"/>
+                                    <Label x:Name="lbdosis" Text="{Binding dosis}" Grid.Row="0" Grid.Column="2" TextColor="Black"/>
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+    </StackLayout>
+</ContentPage>

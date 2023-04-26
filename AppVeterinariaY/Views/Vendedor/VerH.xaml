@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Vendedor.VerH">
+    <ScrollView>
+        <StackLayout Background="#F5F7F7">
+            <Image Source="Paci.png"
+               Margin="0,0,0,0"
+              HeightRequest="200"
+               WidthRequest="30"/>
+            <Frame Background="#F5F7F7" Padding="2" CornerRadius="0">
+                <Label Text="Historia Clinica " HorizontalTextAlignment="Center" FontSize="25" TextColor="black"  FontAttributes="Bold"/>
+            </Frame>
+            <Entry x:Name="IdHistoriatxt" IsVisible="False" Text="{Binding Idhistoria}"/>
+            <Entry x:Name="IdMascotatxt" IsVisible="False" Text="{Binding Idmascota}"/>
+
+            <Label Text="Fecha de Ingreso" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <DatePicker TextColor="#7F7979" x:Name="fechatxt">
+                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                </DatePicker>
+            </Frame>
+
+            <Label Text="Motivo de la consulta" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry  TextColor="#7F7979"
+                           x:Name="motivotxt"
+                        Text="{Binding motivoConsulta}"/>
+            </Frame>
+            <Label Text="Sintomatologia" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="sintomatologiatxt"
+                       Text="{Binding sintomatologia}"/>
+            </Frame>
+            <Label Text="Diagnostico" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="diagnosticotxt"
+                       Text="{Binding diagnostico}"/>
+            </Frame>
+
+            <Label Text="Procedimiento" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="procedimientotxt"
+                       Text="{Binding procedimiento}"/>
+            </Frame>
+
+            <Label Text="Medicamento" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="medicamentotxt"
+                       Text="{Binding medicamento}"/>
+            </Frame>
+            <Label Text="Dosis" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="dosistxt"
+                       Text="{Binding dosis}"/>
+            </Frame>
+            <Entry x:Name="IdOrdentxt" IsVisible="False" Text="{Binding Idorden}"/>
+
+            <Label Text="Historial de vacunación" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="historialtxt"
+                       Text="{Binding historialVacunacion}"/>
+            </Frame>
+
+            <Label Text="Alergias" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="alergiastxt"
+                       Text="{Binding alergias}"/>
+            </Frame>
+
+            <Label Text="Detalles" TextColor="black"  FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            <Frame CornerRadius="10"
+                       Margin="0,10,0,0"
+                       Background="#DADFDB">
+                <Entry TextColor="#7F7979"
+                           x:Name="detallestxt"
+                       Text="{Binding detalles}"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" HorizontalOptions="CenterAndExpand">
+                <Button Text="Volver"
+                            Background="#138A34" 
+                            CornerRadius="10"
+                            x:Name="btnVolver"
+                       Clicked="btnVolver_Clicked"  IsVisible="true"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

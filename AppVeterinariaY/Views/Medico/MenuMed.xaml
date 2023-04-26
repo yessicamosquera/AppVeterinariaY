@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVeterinariaY.Views.Medico.MenuMed"
+             Title="Master">
+    
+    <ContentPage.Content Background="#12a89d">
+        <StackLayout Background="white" >
+
+            <Button Margin="0,40,0,0" Background="#12a89d" x:Name="Ordenes" Text="Registrar orden médica" Clicked="Ordenes_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="VerordenTxt" Text="Orden Medica" Clicked="VerordenTxt_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="Historia1Txt" Text="Registrar Historia clinica" Clicked="Historia1Txt_Clicked" />
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="VerHistoriaTxt" Text="Historia Clinica" Clicked="VerHistoriaTxt_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="RegistrarpacTxt" Text="Registrar Paciente" Clicked="RegistrarpacTxt_Clicked"/>
+            <Button Margin="0,20,0,0" Background="#12a89d" x:Name="VerpacienteTxt" Text="Pacientes" Clicked="VerpacienteTxt_Clicked"/>
+
+            <Button Margin="0,200,0,0" Background="#12a89d" Text="Cerrar sesion"
+                    CornerRadius="10"
+                    x:Name="salir1"
+                    Clicked="salir1_Clicked"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
